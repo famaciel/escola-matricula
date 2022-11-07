@@ -1,0 +1,218 @@
+.matricula-form {
+  width: 100%;
+  height: 100vh;
+
+  padding-top: 30px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &-header {
+    text-align: center;
+  }
+}
+
+.student-form-row {
+  display: flex;
+  align-items: center;
+
+  .student-form-field-container {
+    margin: 15px;
+    width: 100%;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .matricula-form {
+    height: calc(100vh - 110px);
+    overflow: auto;
+  }
+
+  .formulario-matricula-buttons {
+    position: fixed;
+    bottom: 0;
+    height: 80px;
+    display: flex;
+    border-top: 1px solid #2684ff;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .round-clickable-icon {
+    border-radius: 0;
+    width: 100%;
+
+    &:first-child {
+      border-right: 1px solid rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.next-step-button {
+  @media (min-width: 768px) {
+    position: fixed;
+    top: 55%;
+    right: 60px;
+  }
+}
+
+.previous-step-button {
+  @media (min-width: 768px) {
+    position: fixed;
+    top: 55%;
+    left: 60px;
+  }
+}
+
+.parents-form {
+  padding-bottom: 60px;
+}
+
+.student-form-field-container {
+  &.multiple input {
+    margin: 10px 0;
+  }
+}
+
+.formulario-integral {
+  width: 40%;
+}
+
+.double-input-container {
+  display: flex;
+  input {
+    width: 100%;
+
+    &:first-child {
+      margin-right: 5px;
+    }
+
+    &:last-child {
+      margin-left: 5px;
+      width: 50%;
+    }
+  }
+}
+
+.formulario-emergencial {
+  width: 50%;
+}
+
+.double-input-labels {
+  display: flex;
+  margin-top: 30px;
+
+  label {
+    width: 100%;
+
+    &:last-child {
+      width: 52%;
+    }
+  }
+}
+
+.submit-loading-container {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    margin: 0;
+    margin-bottom: 60px;
+  }
+}
+
+.info-docs {
+  width: 50%;
+  padding-bottom: 60px;
+}
+
+.docs-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  .document {
+    height: 150px;
+    width: calc(50% - 60px);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    background-color: white;
+    border: 1px solid #2684ff6e;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+    position: relative;
+
+    cursor: pointer;
+    transition: 300ms;
+
+    .download-icon {
+      display: none;
+
+      position: absolute;
+      top: 45%;
+      left: 47%;
+      opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+
+      border: 1px solid #144687;
+
+      h3,
+      p {
+        opacity: 0.5;
+      }
+
+      .download-icon {
+        display: block;
+      }
+    }
+  }
+}
+
+.matricula-form-fields {
+  width: 60%;
+}
+
+@media (max-width: 768px) {
+  .matricula-form-fields {
+    width: 80%;
+  }
+
+  .student-form-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .student-form-field-container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .docs-grid {
+    .document {
+      margin: 5px;
+
+      width: calc(100% - 60px);
+    }
+  }
+}

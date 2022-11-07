@@ -1,0 +1,165 @@
+.students-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+  &-title {
+    width: fit-content;
+    p {
+      margin: 0;
+    }
+    h2 {
+      margin: 0;
+    }
+  }
+
+  &-actions {
+    display: flex;
+    align-items: center;
+
+    &-combo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      padding: 5px 15px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+      height: 30px;
+      margin-right: 5px;
+      width: 150px;
+
+      &:focus {
+        outline: red;
+        border-color: #2684ff;
+        border-width: 2px;
+      }
+    }
+  }
+}
+
+.nucleo-select {
+  width: 180px;
+
+  input {
+    height: 28px;
+  }
+}
+
+.students-list-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  background-color: rgba(0, 0, 0, 0.05);
+
+  h2 {
+    width: 100%;
+    font-size: 14px;
+    opacity: 0.6;
+  }
+}
+
+.students-list {
+  padding: 0;
+  margin: 0;
+
+  .student-row {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    cursor: pointer;
+
+    .action-buttons button svg {
+      opacity: 0.8;
+    }
+
+    &:hover {
+      background-color: #4c9aff;
+      color: white;
+      transform: scale(1.01);
+
+      .action-buttons button svg {
+        color: white;
+      }
+    }
+
+    h3,
+    p {
+      margin: 0;
+    }
+
+    &-cell {
+      width: 100%;
+    }
+  }
+}
+
+.students {
+  margin: 0 30px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.opacity {
+  opacity: 0.6;
+  font-weight: 600;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.student-form-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.animator {
+  width: 0;
+  transition: 400ms;
+
+  &.show {
+    height: 99.7vh;
+    width: 80vw;
+  }
+}
+
+.loading-students-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 150px;
+  border-top: 1px solid #2684ff;
+}
+
+.add-student-button {
+  margin-left: 30px;
+  align-self: flex-end;
+  min-width: fit-content;
+}
+
+.action-buttons {
+  display: flex;
+
+  button:hover:not([disabled]) {
+    background-color: white;
+
+    svg {
+      color: gray !important;
+    }
+  }
+}
+
+.whatsapp-icon {
+  width: 20px;
+  height: 20px;
+}

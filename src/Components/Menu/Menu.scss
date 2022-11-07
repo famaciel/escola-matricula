@@ -1,0 +1,40 @@
+.menu {
+  display: flex;
+  align-items: center;
+
+  padding: 15px 0;
+
+  h1 {
+    margin: 0 30px;
+  }
+
+  img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.menu-list {
+  display: flex;
+
+  button {
+    margin: 0 8px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: 300ms;
+      font-weight: 700;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
