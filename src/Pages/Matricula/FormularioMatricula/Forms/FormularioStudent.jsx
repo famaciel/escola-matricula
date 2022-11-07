@@ -67,7 +67,7 @@ const FormularioStudent = ({
         </div>
 
         <div className="student-form-field-container">
-          <label>Taxas:</label>
+          <label>{cabecalho.termoTaxas}:</label>
           <CurrencyInput
             disabled
             decimalsLimit={2}
